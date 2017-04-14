@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>OAirDemo</title>
+        <link type="text/css" href="assets/css/style.css" rel="stylesheet" /> 
+        <script type="text/javascript" src="lib/crafty.js"></script>
+        <script>var game_path = location.href.lastIndexOf("/") !== -1 ? location.href.substring(0, location.href.lastIndexOf("/") + 1) : location.href;</script>
+        <!--Jquery 为排除干扰准备异常 TODO -->
+        <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.bootcss.com/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        <!-- Crafty Object JS -->
+        <!-- 加载器对象封装  TODO Read 没看太懂 -->
+        <script type="text/javascript" src="assets/js/loader.js"></script> 
+        <!-- 音频元素对象封装 TODO Read 没看太懂 -->
+        <script type="text/javascript" src="assets/js/audio.js"></script>
+        <!-- 音频元素加载 -->
+        <script type="text/javascript" src="assets/js/sounds.js"></script> 
+        <!-- 各路精灵元素加载  -->
+        <script type="text/javascript" src="assets/js/sprites.js"></script>
+        <!-- 奖励（加油箱）对象定义 -->
+        <script type="text/javascript" src="assets/js/powerups.js"></script>
+        <!-- 子弹对象定义 -->
+        <script type="text/javascript" src="assets/js/weapons.js"></script>
+        <!-- 游戏各类事件对象定义 -->
+        <script type="text/javascript" src="assets/js/effects.js"></script>
+        <!-- 敌机对象定义 -->
+        <script type="text/javascript" src="assets/js/enemys.js"></script>
+        <!-- 战机对象定义 -->
+        <script type="text/javascript" src="assets/js/player.js"></script>
+        <!-- 场景设置 -->
+        <script type="text/javascript" src="assets/js/levels.js"></script>
+        <!-- 游戏入口 -->
+        <script type="text/javascript" src="assets/js/game.js"></script>
+        
+    </head>
+    <body>
+        <div class="info"><h1>OAirDemo</h1>
+            <p>Sunny OAirDemo</p>
+        </div>
+        <div id="cr-stage">
+            <div id="interface">
+                <!-- 底部角色当前状态状态栏 --> 
+                <div class="panel transparent bottom"></div>
+                <!-- 上部游戏进度状态栏 --> 
+                <div class="panel transparent"></div>
+                <!-- 游戏角色剩余命数 -->
+                <div class="lives text left"></div>
+                <!-- 游戏关数 -->
+                <div class="level text center"></div>
+                <!-- 游戏分数 -->
+                <div class="score text right"></div>
+                <!-- 游戏角色血量 -->
+                <div class="bars bottom left" >
+                    <div id="hp" ><span class="text"></span></div>
+                </div>
+                <!-- 游戏角色防护盾数量 -->
+                <div class="bars bottom"  style="left:50%;margin-left:-89px">
+                    <div id="shield" ><span class="text"></span></div>
+                </div>
+                <!-- 游戏角色武器冷却 -->
+                <div class="bars bottom right" >
+                    <div id="heat" ><span class="text"></span></div>
+                </div>
+                <!-- 游戏状态弹出层 -->
+                <div class="alert"></div>
+            </div>
+            <!--游戏加载启动层 -->
+            <div id="loading">
+                <!-- 游戏启动按钮 -->
+                <div class="button" >Play Game</div>
+                <!-- 游戏加载进度条 -->
+                <div class="bars bottom">
+                    <div id="load" ><span class="text"></span></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
